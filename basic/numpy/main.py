@@ -5,7 +5,7 @@
 
 # ## Import
 
-# In[109]:
+# In[2]:
 
 
 import numpy as np
@@ -13,7 +13,7 @@ import numpy as np
 
 # ## Create & Type
 
-# In[110]:
+# In[3]:
 
 
 # Create a numpy array
@@ -31,7 +31,7 @@ print(np2.dtype)
 
 # ## Common ways to create array
 
-# In[111]:
+# In[4]:
 
 
 print(np.arange(10))
@@ -50,7 +50,7 @@ print(np.eye(4))
 print(np.eye(4, 4))
 
 
-# In[112]:
+# In[5]:
 
 
 # random
@@ -63,7 +63,7 @@ print(np2)
 
 # ## Dimension
 
-# In[113]:
+# In[6]:
 
 
 # ndim & shape & size & itemsize
@@ -91,7 +91,7 @@ print(np3.size)
 print(np3.itemsize)
 
 
-# In[114]:
+# In[7]:
 
 
 # reshape
@@ -127,7 +127,7 @@ print(np7, np7.shape)
 
 # ## Slice
 
-# In[115]:
+# In[8]:
 
 
 # Slice in one dimension
@@ -139,7 +139,7 @@ print(np1[0:4])
 print(np1[0:10:2])
 
 
-# In[116]:
+# In[9]:
 
 
 # Slice in two dimension
@@ -158,7 +158,7 @@ print(np2[0:2, 0:3])
 
 # ## Bool Index
 
-# In[117]:
+# In[10]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -187,7 +187,7 @@ print(np6)
 
 # ## Value Update
 
-# In[118]:
+# In[11]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -208,7 +208,7 @@ print(np2)
 
 # ## Broadcast
 
-# In[119]:
+# In[12]:
 
 
 # array and number
@@ -224,7 +224,7 @@ np3 = np1 * 10
 print(np3)
 
 
-# In[120]:
+# In[13]:
 
 
 # array and array
@@ -251,7 +251,7 @@ print(np1 + np4)
 
 # ## Arrays Concatenate
 
-# In[121]:
+# In[14]:
 
 
 # row
@@ -274,7 +274,7 @@ np6 = np.hstack((np4, np5))
 print(np6)
 
 
-# In[122]:
+# In[15]:
 
 
 # concatenate
@@ -306,7 +306,7 @@ print(np7)
 
 # ## Array Split
 
-# In[123]:
+# In[16]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -329,7 +329,7 @@ h1, h2, h3 = np.hsplit(np1, 3)
 print(h1, h2, h3)
 
 
-# In[124]:
+# In[17]:
 
 
 # array_split
@@ -347,7 +347,7 @@ print(v1, v2, v3)
 
 # ## Array Transpose
 
-# In[125]:
+# In[18]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -368,7 +368,7 @@ print(np4)
 
 # ## Array Copy
 
-# In[126]:
+# In[19]:
 
 
 # no copy
@@ -382,7 +382,7 @@ np2[0, 0] = 1
 print(np1, np2)
 
 
-# In[127]:
+# In[20]:
 
 
 # shallow copy
@@ -396,7 +396,7 @@ np2[0, 0] = 1
 print(np1, np2)
 
 
-# In[128]:
+# In[21]:
 
 
 # deep copy
@@ -412,7 +412,7 @@ print(np1, np2)
 
 # ## CSV
 
-# In[129]:
+# In[22]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -422,14 +422,14 @@ print('----------------')
 np.savetxt('np1.csv', np1, fmt='%d', delimiter=',', header='column1, column2, column3, column4, column5, column6', comments='') 
 
 
-# In[130]:
+# In[23]:
 
 
 file = np.loadtxt('np1.csv', dtype=np.int32, delimiter=',', skiprows=1)
 print(file)
 
 
-# In[131]:
+# In[24]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -440,7 +440,7 @@ np.save('np1', np1)
 np.savez('np1', np1) 
 
 
-# In[132]:
+# In[25]:
 
 
 np1 = np.load('np1.npy')
@@ -449,7 +449,7 @@ print(np1)
 
 # ## Handle Empty Value
 
-# In[133]:
+# In[26]:
 
 
 np1 = np.arange(24).reshape(4, 6);
@@ -465,7 +465,7 @@ print(np.isnan(np1[0,1]))
 print(np1[0,1] * 2) # NaN, because any operation with NaN will result in NaN
 
 
-# In[134]:
+# In[27]:
 
 
 # When reading from a file, you can use the following code to convert empty strings to NaN
@@ -476,7 +476,7 @@ scores = scores.astype(float)
 
 # ## Random Module
 
-# In[191]:
+# In[28]:
 
 
 np.random.seed(1) # if you want the same random number, you can use the same seed
@@ -509,7 +509,7 @@ print(np6)
 
 # ## Axis
 
-# In[198]:
+# In[29]:
 
 
 np1 = np.arange(24).reshape(4, 6)
@@ -539,7 +539,7 @@ print(np7)
 
 # [Common Function](https://juejin.cn/post/7001376518555303950?searchId=20240202025842E24ADE3219F7076CC15E#heading-13)
 
-# In[207]:
+# In[30]:
 
 
 np1 = np.random.uniform(-10, 10, (2, 4))
@@ -566,7 +566,7 @@ print(np5)
 
 # ![](./aggregate.png)
 
-# In[209]:
+# In[31]:
 
 
 # boolean
@@ -582,7 +582,7 @@ res2 = np.any(np1 > 0)
 print(res2)
 
 
-# In[225]:
+# In[32]:
 
 
 # sort
@@ -609,8 +609,22 @@ np6 = -np.sort(-np1, axis=1) # return the sorted array in descending order
 print(np6)
 
 
-# In[ ]:
+# In[39]:
 
 
+np.random.seed(1)
+np1 = np.random.randint(0, 10, (1, 10))
+print(np1)
 
+print('----------------')
+np2 = np.squeeze(np1, axis=0)
+print(np2)
+
+print('----------------')
+np4 = np.random.randint(0, 10, (10, 1))
+print(np4)
+
+print('----------------')
+np5 = np.squeeze(np4, axis=1)
+print(np5)
 
