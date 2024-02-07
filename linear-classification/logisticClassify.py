@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 ################################################################################
 
 
-class logisticClassify2(ml.classifier):
+class logisticClassify(ml.classifier):
     """A binary (2-class) logistic regression classifier
 
     Attributes:
